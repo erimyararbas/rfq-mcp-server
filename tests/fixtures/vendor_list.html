@@ -1,0 +1,24 @@
+<html><body><main>
+<table>
+  <thead><tr><th>Vendor Name</th><th>Country</th><th>Note</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr id="vendor-101"><td>Brightmill Machining</td><td>Germany</td>
+        <td><span title="Full note that the UI truncates on screen">Full note…</span></td>
+        <td><a href="/suppliers/edit/101">Edit</a> <button onclick="openArchive(101)">Archive</button></td></tr>
+    <tr id="vendor-102"><td>Kestrel   CNC
+        Works</td><td>Poland</td><td>-</td><td><a href="/suppliers/edit/102">Edit</a></td></tr>
+  </tbody>
+</table>
+<table><thead><tr><th>Name</th></tr></thead><tbody><tr><td colspan="1">No records found.</td></tr></tbody></table>
+<a href="?page=2">2</a><a href="?page=3">3</a>
+<form method="post">
+  <input type="hidden" name="csrfmiddlewaretoken" value="secret">
+  <input name="name" value="Brightmill Machining">
+  <select name="categories" multiple><option value="11" selected>CNC Milling</option><option value="12">CNC Turning</option><option value="21" selected>Laser Cutting</option></select>
+  <select name="status"><option value="Approved" selected>Approved</option><option value="Pending">Pending</option></select>
+  <input type="checkbox" name="active" checked>
+  <input type="checkbox" name="newsletter">
+  <textarea name="notes">Line one</textarea>
+  <input type="file" name="logo">
+</form>
+</main></body></html>

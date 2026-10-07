@@ -1,0 +1,54 @@
+{
+  "regions": {"1": "EU", "2": "US", "3": "East Asia", "4": "Near East"},
+  "category_groups": [
+    {"id": 1, "name": "Machining", "categories": [{"id": 11, "title": "CNC Milling"}, {"id": 12, "title": "CNC Turning"}]},
+    {"id": 2, "name": "Sheet Metal", "categories": [{"id": 21, "title": "Laser Cutting"}, {"id": 22, "title": "Bending"}]},
+    {"id": 3, "name": "Additive", "categories": [{"id": 31, "title": "SLS"}, {"id": 32, "title": "FDM"}]},
+    {"id": 4, "name": "Molding", "categories": [{"id": 41, "title": "Injection Molding"}]}
+  ],
+  "compliances": [{"id": 1, "name": "ISO 9001"}, {"id": 2, "name": "AS9100"}, {"id": 3, "name": "ISO 13485"}],
+  "vendors": [
+    {"id": 101, "name": "Brightmill Machining", "email": "rfq@brightmill.example", "country": "Germany", "region_id": 1,
+     "category_ids": [11, 12], "compliance_ids": [1, 2], "onboarding_status": "Approved"},
+    {"id": 102, "name": "Kestrel CNC Works", "email": "sales@kestrel-cnc.example", "country": "Poland", "region_id": 1,
+     "category_ids": [11], "compliance_ids": [1], "onboarding_status": "Approved"},
+    {"id": 103, "name": "Harborline Sheet Metal", "email": "quotes@harborline.example", "country": "United States", "region_id": 2,
+     "category_ids": [21, 22], "compliance_ids": [1], "onboarding_status": "Approved"},
+    {"id": 104, "name": "Lotus Precision Molding", "email": "bd@lotus-molding.example", "country": "China", "region_id": 3,
+     "category_ids": [41], "compliance_ids": [1, 3], "onboarding_status": "Approved"},
+    {"id": 105, "name": "Anadolu Talaşlı İmalat", "email": "teklif@anadolu-talasli.example", "country": "Türkiye", "region_id": 4,
+     "category_ids": [11, 12, 21], "compliance_ids": [1], "onboarding_status": "Approved"},
+    {"id": 106, "name": "Fjordline Additive", "email": "hello@fjordline.example", "country": "Norway", "region_id": 1,
+     "category_ids": [31, 32], "compliance_ids": [], "onboarding_status": "Pending"}
+  ],
+  "rfqs": [
+    {"id": 1, "number": "RFQ-1001", "title": "Aluminium housing, 6061-T6", "created_by": "demo.user",
+     "sent_date": "2026-09-14", "expiry_date": "2026-10-20", "archived": false,
+     "email_message": "Please quote for the attached drawing. Anodised, black.",
+     "items": [
+       {"item_id": 1, "part_number": "HSG-200", "description": "Main housing", "quantity": 50, "unit": "Each", "material": "Al 6061-T6"},
+       {"item_id": 2, "part_number": "HSG-201", "description": "Cover plate", "quantity": 50, "unit": "Each", "material": "Al 6061-T6"}
+     ],
+     "vendor_ids": [101, 102, 105]},
+    {"id": 2, "number": "RFQ-1002", "title": "Laser-cut brackets", "created_by": "demo.user",
+     "sent_date": "2026-09-28", "expiry_date": "2026-10-12", "archived": false,
+     "email_message": "Zinc plated. Bending per drawing.",
+     "items": [{"item_id": 3, "part_number": "BRK-10", "description": "L-bracket", "quantity": 400, "unit": "Each", "material": "S235 2mm"}],
+     "vendor_ids": [103, 105]}
+  ],
+  "quotes": [
+    {"quote_id": 501, "rfq_id": 1, "vendor_id": 101, "status": "quoted", "currency": "EUR", "lead_time_days": 21,
+     "payment_terms": "30 days net", "incoterms": "EXW", "selected": false, "message": "Anodising included.",
+     "items": [{"quote_item_id": 9001, "item_id": 1, "unit_price": 38.5, "markup_price": null},
+               {"quote_item_id": 9002, "item_id": 2, "unit_price": 9.2, "markup_price": null}]},
+    {"quote_id": 502, "rfq_id": 1, "vendor_id": 105, "status": "quoted", "currency": "EUR", "lead_time_days": 28,
+     "payment_terms": "50% advance", "incoterms": "FCA Istanbul", "selected": false, "message": "",
+     "items": [{"quote_item_id": 9003, "item_id": 1, "unit_price": 31.0, "markup_price": null},
+               {"quote_item_id": 9004, "item_id": 2, "unit_price": 7.9, "markup_price": null}]},
+    {"quote_id": 503, "rfq_id": 1, "vendor_id": 102, "status": "declined", "currency": null, "lead_time_days": null,
+     "payment_terms": null, "incoterms": null, "selected": false, "message": "Capacity full until December.", "items": []},
+    {"quote_id": 504, "rfq_id": 2, "vendor_id": 103, "status": "quoted", "currency": "USD", "lead_time_days": 14,
+     "payment_terms": "30 days net", "incoterms": "FOB", "selected": false, "message": "",
+     "items": [{"quote_item_id": 9005, "item_id": 3, "unit_price": 1.85, "markup_price": null}]}
+  ]
+}

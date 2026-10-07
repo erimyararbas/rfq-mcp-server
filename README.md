@@ -2,7 +2,7 @@
 
 An [MCP](https://modelcontextprotocol.io) server that lets Claude work with a procurement / RFQ (request for quotation) platform. Through it, Claude can find suppliers, send RFQs, track who has answered, compare quotes and mark the winning offer.
 
-I built the original version during my internship at a manufacturing company, for the company's internal RFQ web app. This public repository contains the same tool design and safety layer. The company's system is replaced by a **demo backend with fictional data**, so anyone can run and try it without access to real systems.
+I built the original version at the manufacturing company where I currently work, for its internal RFQ web app. This public repository contains the same tool design and safety layer. The company system is replaced by a **demo backend with fictional data**, so anyone can run and try it without access to real systems.
 
 ![Architecture](docs/architecture.svg)
 
